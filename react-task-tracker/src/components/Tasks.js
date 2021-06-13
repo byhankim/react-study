@@ -8,9 +8,9 @@ const Tasks = ({tasks, onDelete, onToggle}) => { // catch the prop
         // tasks.push({task}) <- CAN'T!!!!
         // setTasks([...tasks, {newTask}]) <- YES!!
         <>
-          {tasks.map((task) => (
+          {tasks.map((task, index) => (
             <Task 
-                key={task.id} 
+                key={index} 
                 task={task} 
                 onDelete={onDelete} 
                 onToggle={onToggle}
