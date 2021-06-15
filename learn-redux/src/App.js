@@ -15,7 +15,7 @@ function App() {
       <button onClick={() => dispatch(decrement())}>-</button>
       <button onClick={() => dispatch(signIn())}>{isLogged ? '로그아웃' : '로그인'}</button>
       {isLogged ? <h3>Value Info I shouldn't see</h3> : ''}
-      {/* <Store /> */}
+      {/* <Store />  */}
     </div>
   );
 }
