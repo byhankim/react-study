@@ -3,7 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import allReducer from './reducers'; // no need index cuz webpack automatically looks for index
 
+const store = createStore(
+  allReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
+
+// 1. store
+// 2. action -> 명세, 파라미터 넘겨줌
+// 3. reducer -> state를 리턴함 & 작업도 함
+// 4. dispatch -> action을 실행
 
 
 /*import {createStore} from 'redux';
@@ -48,9 +60,11 @@ store.dispatch(decrement())
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={ store }>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
