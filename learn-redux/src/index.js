@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createStore} from 'redux';
 
-// let store = createStore(counterReducer)
 
+
+/*import {createStore} from 'redux';
 
 // STORE ( holds all the GLOBALIZED data/states for my app )
 
@@ -39,8 +39,11 @@ let store = createStore(counter);
 store.subscribe(() => console.log(store.getState()));
 
 // DISPATCH -> actually executes the action
-store.dispatch(increment)
+store.dispatch(increment())
+store.dispatch(decrement())
+store.dispatch(decrement())
 
+*/ // TOO MUCH WORK!!
 
 
 
